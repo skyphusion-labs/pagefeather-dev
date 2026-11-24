@@ -1,0 +1,32 @@
+# pagefeather.dev
+
+> WordPress and WooCommerce on Cloudflare, in your own Cloudflare account.
+> Open source. No hosted funnel. You keep the tokens, the data, and the bill.
+
+## Product
+- Site: https://www.pagefeather.dev/
+- Engine source: https://github.com/skyphusion-labs/pagefeather
+- Marketing theme: https://github.com/skyphusion-labs/pagefeather-dev
+- Get started: https://www.pagefeather.dev/get-started/
+- How it works: https://www.pagefeather.dev/how-it-works/
+- Limits: https://www.pagefeather.dev/limits/
+- Evidence: https://www.pagefeather.dev/evidence/
+- About: https://www.pagefeather.dev/about/
+- Live store example: https://ggc.sh
+
+## Docs
+- Guide index: https://github.com/skyphusion-labs/pagefeather/tree/main/docs
+- Cost: https://github.com/skyphusion-labs/pagefeather/blob/main/docs/guide/cost.md
+- Limits: https://github.com/skyphusion-labs/pagefeather/blob/main/docs/guide/limits.md
+- Support matrix: https://github.com/skyphusion-labs/pagefeather/blob/main/docs/support-matrix.md
+- Results ledger: https://github.com/skyphusion-labs/pagefeather/blob/main/docs/results.md
+
+## Paths
+- b-dosql: PHP and SQLite in one Durable Object (Workers Free or Paid)
+- Approach A: PHP in a Worker, MySQL through Hyperdrive (Workers Paid; real WooCommerce stores)
+- Many sites: Workers for Platforms
+
+## Labs
+- Skyphusion Labs: https://skyphusion.org
+- Engineering blog: https://skyphusion.net
+- GitHub org: https://github.com/skyphusion-labs

@@ -18,6 +18,62 @@ add_action('after_setup_theme', static function (): void {
 	remove_action('wp_print_styles', 'print_emoji_styles');
 });
 
+/**
+ * Keep the public marketing site indexable.
+ *
+ * When blog_public is 0, WordPress asks crawlers to skip the site.
+ * This product site must stay public.
+ */
+function pagefeather_force_blog_public(): string
+{
+	return '1';
+}
+add_filter('pre_option_blog_public', 'pagefeather_force_blog_public');
+
+add_action('after_setup_theme', static function (): void {
+	global $wpdb;
+	if (!isset($wpdb) || !is_object($wpdb)) {
+		return;
+	}
+	$stored = $wpdb->get_var(
+		"SELECT option_value FROM {$wpdb->options} WHERE option_name = 'blog_public' LIMIT 1"
+	);
+	if ((string) $stored === '1') {
+		return;
+	}
+	// Drop the filter so update_option sees the real stored value.
+	remove_filter('pre_option_blog_public', 'pagefeather_force_blog_public');
+	update_option('blog_public', '1');
+	add_filter('pre_option_blog_public', 'pagefeather_force_blog_public');
+}, 1);
+
+/**
+ * Serve /llms.txt from the theme file.
+ */
+add_action('template_redirect', static function (): void {
+	$path = wp_parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
+	if (!is_string($path)) {
+		return;
+	}
+	$path = untrailingslashit($path);
+	if ($path !== '/llms.txt') {
+		return;
+	}
+	$file = get_template_directory() . '/llms.txt';
+	if (!is_readable($file)) {
+		status_header(404);
+		nocache_headers();
+		exit;
+	}
+	status_header(200);
+	header('Content-Type: text/plain; charset=utf-8');
+	header('X-Robots-Tag: all');
+	header('Cache-Control: public, max-age=3600');
+	// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_readfile -- plain static theme file.
+	readfile($file);
+	exit;
+}, 0);
+
 add_action('wp_enqueue_scripts', static function (): void {
 	$uri = get_template_directory_uri();
 	$path = get_template_directory();

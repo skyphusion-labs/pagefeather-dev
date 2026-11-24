@@ -44,6 +44,27 @@ jobs:
           f=wp-content/themes/pagefeather-site/assets/js/site.js
           cp "$f" "$RUNNER_TEMP/check.mjs"
           node --check "$RUNNER_TEMP/check.mjs"
+      - name: SEO and llms.txt
+        run: |
+          set -euo pipefail
+          # Theme must not emit a hard-coded robots disallow meta in HTML.
+          if git grep -nE "content=['\"][^'\"]*noindex|name=['\"]robots['\"]" -- \
+            'wp-content/themes/**/*.php' 'wp-content/themes/**/*.html' 'wp-content/themes/**/*.js'; then
+            echo "::error::theme must not hard-code robots disallow meta"
+            exit 1
+          fi
+          # Theme must force blog_public so WordPress does not ask crawlers to skip.
+          grep -q "pre_option_blog_public" wp-content/themes/pagefeather-site/functions.php
+          grep -q "pagefeather_force_blog_public" wp-content/themes/pagefeather-site/functions.php
+          echo "ok: blog_public force present"
+          # Public /llms.txt is served from the theme file by functions.php.
+          f=wp-content/themes/pagefeather-site/llms.txt
+          test -s "$f"
+          grep -q 'pagefeather.dev' "$f"
+          grep -q 'https://www.pagefeather.dev/' "$f"
+          grep -q 'https://github.com/skyphusion-labs/pagefeather' "$f"
+          grep -q "llms.txt" wp-content/themes/pagefeather-site/functions.php
+          echo "ok $f"
   coverage:
     runs-on: ubuntu-latest
     steps:
