@@ -55,7 +55,7 @@ get_header();
 				<h3>What you need</h3>
 				<ul>
 					<li>Workers Paid (Free installer stops at the CPU limit)</li>
-					<li><code class="inline-code">MYSQL=external</code> or <code class="inline-code">MYSQL=vultr</code></li>
+					<li><code class="inline-code">MYSQL=external</code> to a managed host (Azure or PlanetScale)</li>
 					<li>Required <code class="inline-code">PLACEMENT</code> (for example <code class="inline-code">azure:westus2</code>)</li>
 					<li>You also pay for the MySQL server</li>
 				</ul>

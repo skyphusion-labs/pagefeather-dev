@@ -78,7 +78,7 @@ get_header();
 			<article class="card">
 				<div class="card-meta"><span class="pill pill--teal">$5/mo</span></div>
 				<h3>Workers Paid</h3>
-				<p>$5 a month for Workers. Approach A also needs your MySQL bill. A <code class="inline-code">MYSQL=vultr</code> box is $10 a month.</p>
+				<p>$5 a month for Workers. Approach A also needs a managed MySQL host. Prefer Azure or PlanetScale.</p>
 			</article>
 			<article class="card">
 				<div class="card-meta"><span class="pill pill--amber">$30/mo</span></div>
