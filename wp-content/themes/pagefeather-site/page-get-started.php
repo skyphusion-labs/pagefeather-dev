@@ -84,7 +84,7 @@ terraform output -raw admin_password</code></pre>
   MYSQL_DATABASE=wordpress \
   PLACEMENT=azure:westus2 \
   NAME=my-site ./deploy/deploy.sh</code></pre>
-				<p>Step-by-step MySQL page is open (#1365). Use onboarding and the deploy reference today.</p>
+				<p>Use <code class="inline-code">MYSQL=external</code> to a managed host (Azure or PlanetScale). Step-by-step MySQL page is open (#1365). Use onboarding and the deploy reference today.</p>
 			</article>
 		</div>
 	</section>
