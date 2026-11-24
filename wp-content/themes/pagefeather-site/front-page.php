@@ -83,9 +83,9 @@ $mark = get_template_directory_uri() . '/assets/img/mark.svg';
 				<p>WordPress wp suite 18 of 18. routes.py with 0 failures on <code class="inline-code">cf759hw</code>. WooCommerce <code class="inline-code">tests/woo.py</code> 12 of 12, three runs in a row.</p>
 			</article>
 			<article class="card">
-				<div class="card-meta"><span class="pill pill--teal">Fresh clone</span></div>
-				<h3>Install from a clean tree</h3>
-				<p>b-dosql, Workers for Platforms, and approach A Pass from a fresh clone of main (results.md, 2026-11-24).</p>
+				<div class="card-meta"><span class="pill pill--teal">Pass</span></div>
+				<h3>Install from main</h3>
+				<p>b-dosql, Workers for Platforms, and approach A Pass from main (results.md, 2026-11-24).</p>
 			</article>
 		</div>
 		<p style="margin-top:1.25rem;"><a class="card-link" href="/evidence/">Open the evidence page <span aria-hidden="true">→</span></a></p>
@@ -117,7 +117,7 @@ $mark = get_template_directory_uri() . '/assets/img/mark.svg';
 			<p class="section-eyebrow">This site</p>
 			<h2>A live Worker, not a VPS</h2>
 			<p class="section-intro">If you come from LAMP or cPanel: this site is not a virtual machine and not a shared host panel. It is WordPress on a Cloudflare Worker. The layout and bindings live in config you deploy with <code class="inline-code">deploy/deploy.sh</code> (Terraform plus Wrangler). That is infrastructure as code. Your Cloudflare account owns the Worker.</p>
-			<p class="section-intro" style="margin-top:0.75rem;"><code class="inline-code">www.pagefeather.dev</code> uses the built-in database path (b-dosql) on Workers Paid. Apex <code class="inline-code">pagefeather.dev</code> redirects here. Media is in R2. WooCommerce is off.</p>
+			<p class="section-intro" style="margin-top:0.75rem;"><code class="inline-code">www.pagefeather.dev</code> uses the built-in database path (b-dosql) on Workers Paid. Media is in R2. WooCommerce is off.</p>
 		</div>
 		<figure class="figure">
 			<svg class="arch-svg" viewBox="0 0 980 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture sketch: visitor to edge cache to Durable Object with SQLite, media in R2">

@@ -60,7 +60,7 @@ $gh = 'https://github.com/skyphusion-labs/pagefeather/blob/main';
 						<td><a href="<?php echo esc_url($gh . '/docs/results.md'); ?>">docs/results.md</a> · 2026-11-09</td>
 					</tr>
 					<tr>
-						<td><strong>Fresh-clone Pass</strong> for b-dosql, WfP, approach A</td>
+						<td><strong>Install Pass</strong> for b-dosql, WfP, approach A</td>
 						<td><a href="<?php echo esc_url($gh . '/docs/results.md'); ?>">docs/results.md</a> · 2026-11-24</td>
 					</tr>
 					<tr>
@@ -87,7 +87,7 @@ $gh = 'https://github.com/skyphusion-labs/pagefeather/blob/main';
 			<article class="card">
 				<div class="card-meta"><span class="pill pill--teal">Marketing</span></div>
 				<h3>www.pagefeather.dev</h3>
-				<p>This site. A Cloudflare Worker running b-dosql WordPress on Workers Paid. Deployed with <code class="inline-code">deploy/deploy.sh</code>. <code class="inline-code">MEDIA=1</code>. WooCommerce off. Apex redirects here.</p>
+				<p>This site. A Cloudflare Worker running b-dosql WordPress on Workers Paid. Deployed with <code class="inline-code">deploy/deploy.sh</code>. <code class="inline-code">MEDIA=1</code>. WooCommerce off.</p>
 				<a class="card-link" href="/">Home <span aria-hidden="true">→</span></a>
 			</article>
 		</div>
