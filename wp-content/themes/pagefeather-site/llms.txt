@@ -4,6 +4,8 @@
 > Open source. No hosted funnel. You keep the tokens, the data, and the bill.
 
 ## Product
+- Release: 0.2.0 (pre-alpha, 2026-11-28), for testers on approach A: https://github.com/skyphusion-labs/pagefeather/releases/tag/v0.2.0
+- MySQL start page: https://github.com/skyphusion-labs/pagefeather/blob/v0.2.0/docs/guide/start-here-mysql.md
 - Site: https://www.pagefeather.dev/
 - Engine source: https://github.com/skyphusion-labs/pagefeather
 - Marketing theme: https://github.com/skyphusion-labs/pagefeather-dev

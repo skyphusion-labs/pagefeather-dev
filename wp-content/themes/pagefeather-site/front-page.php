@@ -13,12 +13,14 @@ $mark = get_template_directory_uri() . '/assets/img/mark.svg';
 		<p class="hero-eyebrow">Skyphusion Labs / open source</p>
 		<h1>WordPress on Cloudflare.<br><em>In your account.</em></h1>
 		<p class="hero-lede">Pagefeather runs WordPress and WooCommerce on Cloudflare Workers. You keep the tokens, the data, and the bill. There is no hosted funnel and no upsell.</p>
+		<p class="hero-lede"><strong>0.2.0 is out (pre-alpha, 2026-11-28).</strong> It is for outside testers on the MySQL path. Test with it. Do not run a real shop on it yet. <a href="https://github.com/skyphusion-labs/pagefeather/releases/tag/v0.2.0" rel="noopener noreferrer">Release notes</a>.</p>
 		<div class="hero-actions">
 			<a class="btn btn--primary" href="/get-started/">Get started <span class="btn-arrow" aria-hidden="true">→</span></a>
 			<a class="btn btn--ghost" href="/limits/">Read the limits</a>
 			<a class="btn btn--ghost" href="https://github.com/skyphusion-labs/pagefeather" rel="noopener noreferrer">GitHub</a>
 		</div>
 		<dl class="hero-stats">
+			<div class="stat"><dt>Release</dt><dd>0.2.0</dd></div>
 			<div class="stat"><dt>License</dt><dd>GPL-2.0</dd></div>
 			<div class="stat"><dt>Price</dt><dd>$0</dd></div>
 			<div class="stat"><dt>Hosted?</dt><dd>No</dd></div>
