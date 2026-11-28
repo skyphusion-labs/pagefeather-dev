@@ -79,12 +79,11 @@ terraform output -raw admin_password</code></pre>
 				<div class="card-meta"><span class="pill pill--violet">MySQL</span></div>
 				<h3>Real store</h3>
 				<pre class="code-block" style="margin-top:0.75rem;"><code>VARIANT=a MYSQL=external \
-  MYSQL_HOST=mysql.example.com \
-  MYSQL_USER=wp MYSQL_PASSWORD=... \
-  MYSQL_DATABASE=wordpress \
+  MYSQL_HOST=... MYSQL_USER=... MYSQL_PASSWORD=... MYSQL_DATABASE=... \
   PLACEMENT=azure:westus2 \
-  NAME=my-site ./deploy/deploy.sh</code></pre>
-				<p>Step-by-step MySQL page is open (#1365). Use onboarding and the deploy reference today.</p>
+  HYPERDRIVE_SQL_MODE=ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION \
+  WOO_ACTIVE=1 MEDIA=1 BENCH=0 NAME=my-store ./deploy/deploy.sh</code></pre>
+				<p>This is the 0.2.0 pre-alpha path. You need Workers Paid and a MySQL 8 or MariaDB server with SSL and port 3306 open to Cloudflare. Step by step: <a href="https://github.com/skyphusion-labs/pagefeather/blob/v0.2.0/docs/guide/start-here-mysql.md" rel="noopener noreferrer">start-here-mysql.md</a>.</p>
 			</article>
 		</div>
 	</section>

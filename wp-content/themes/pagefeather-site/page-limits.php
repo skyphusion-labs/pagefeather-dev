@@ -54,11 +54,15 @@ get_header();
 				</thead>
 				<tbody>
 					<tr><td><strong>Cold isolate</strong></td><td>First request costs 3 to 9&nbsp;s more at the client</td><td>#1169</td></tr>
-					<tr><td><strong>Checkout</strong></td><td>Mostly database time; about 5 to 7&nbsp;s after transient batching</td><td>#1210</td></tr>
-					<tr><td><strong>Admin edits</strong></td><td>Product saves take seconds, not fractions of a second</td><td>#1078</td></tr>
+					<tr><td><strong>Checkout</strong></td><td>The order POST takes 4.8 to 6.8&nbsp;s; the order is placed</td><td>#1218</td></tr>
+					<tr><td><strong>Admin edits</strong></td><td>A product save takes about 2 to 3&nbsp;s (118 queries)</td><td>#1078</td></tr>
+					<tr><td><strong>REST batch</strong></td><td>About 1.9&nbsp;s per product in a REST product batch</td><td>#1119</td></tr>
+					<tr><td><strong>Order email burst</strong></td><td>Cron sends one queued email a minute; a burst of about 700 orders delays the last by about 31&nbsp;h</td><td>#1120</td></tr>
+					<tr><td><strong>Media cache</strong></td><td>Uploaded images skip the edge cache: 142 to 219&nbsp;ms each from LAX</td><td>#1418</td></tr>
+					<tr><td><strong>Cache purges</strong></td><td>5 a minute per Cloudflare account</td><td>#699</td></tr>
 					<tr><td><strong>Cache MISS</strong></td><td>Uncached guest product page can be slow far from the DB</td><td>#1277</td></tr>
 					<tr><td><strong>Query bound</strong></td><td>One MySQL query may take at most 30&nbsp;s by default</td><td>#1359</td></tr>
-					<tr><td><strong>Docs gap</strong></td><td>Step-by-step MySQL start page still open; use onboarding today</td><td>#1365</td></tr>
+					<tr><td><strong>Coverage</strong></td><td>One region and one provider measured (Azure westus2)</td><td>#1081</td></tr>
 				</tbody>
 			</table>
 		</div>
