@@ -25,8 +25,8 @@ Worker name is `pagefeather`. Variant is `b-dosql`. Do not route a new zone with
 ```sh
 MARKETING=/path/to/pagefeather-dev
 
-IMPORT_CONTENT="$MARKETING/wp-content" IMPORT_THEMES=pagefeather-site REPLACE_INPUTS=1 \
-  VARIANT=b-dosql LOCATION=enam MEDIA=1 WOO_ACTIVE=0 BENCH=0 \
+IMPORT_CONTENT="$MARKETING/wp-content" IMPORT_THEMES=pagefeather-site \
+  VARIANT=b-dosql LOCATION=enam MEDIA=0 WOO_ACTIVE=0 BENCH=0 \
   OPCACHE_REMOTE=1 SITE_REMOTE=1 \
   CUSTOM_DOMAIN=www.pagefeather.dev \
   NAME=pagefeather ./deploy/deploy.sh
